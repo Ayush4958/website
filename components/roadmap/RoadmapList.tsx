@@ -39,7 +39,14 @@ export default function RoadmapList({
 }: IRoadmapListProps) {
 
   // Handle when the Item length is 0 or Item is undefined , shows a message when there are no items to display , we can also customize this message as needed
-  if (!items || items.length === 0) return (<p className='text-gray-700 text-center'> 🛠 Actively Developing </p>);
+  if (!items || items.length === 0) {
+    return (
+      <p className='text-gray-700 text-center'>
+        🛠 Actively Developing
+      </p>
+    )
+  };
+
 
   return (
     items &&
